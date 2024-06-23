@@ -68,10 +68,15 @@ export class NavigationComponent implements OnInit {
     this.user = localStorage.getItem('Usuario');
     this.rol = localStorage.getItem('Rol');
 
-    if (this.servidor != 1) {
-      this.alerta.handleWindowClose(this.servidor);
+    if (this.servidor == 1) {
+      this.obtenerDatos(); // Llamar a la función una vez al inicio
+
+      // Llamar a la función cada 10 segundos (10,000 milisegundos)
+      setInterval(() => {
+        this.obtenerDatos();
+      }, 10000);
     } else {
-      this.obtenerDatos();
+      this.alerta.handleWindowClose(this.servidor);
     }
   }
 
