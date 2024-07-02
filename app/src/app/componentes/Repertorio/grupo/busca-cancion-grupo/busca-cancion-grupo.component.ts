@@ -53,6 +53,9 @@ export class BuscaCancionGrupoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const params = this.activatedRoute.snapshot.params;
+    localStorage.setItem('idGrupo', params['idGrupo']);
+
     if (localStorage.getItem('Usuario') == null) {
       this.router.navigate(['login']);
     } else {
@@ -105,7 +108,6 @@ export class BuscaCancionGrupoComponent implements OnInit {
             this.OcultarAlerta = true;
           }
           this.Archivo = this.Grupo.Nombre;
-          localStorage.setItem('idGrupo', this.Grupo.idGrupo!);
         },
         (err) => {
           console.error(err);

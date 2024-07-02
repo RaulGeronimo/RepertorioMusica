@@ -121,6 +121,7 @@
           <hr class="hr hr-blurry" />
           <li class="nav-item">
             <p class="nav-link">Usuario: {{user}}</p>
+            <p class="nav-link" *ngIf="temporizador == 1">Tiempo de sesión: {{ sessionTime }}</p>
           </li>
           <li class="nav-item">
             <a class="nav-link close" routerLinkActive="active" (click)="Salir()">Cerrar Sesion</a>

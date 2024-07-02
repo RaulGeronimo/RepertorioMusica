@@ -251,6 +251,13 @@ export class AlertasService {
   }
 
   //CERRAR SESION
+  startSession() {
+    if (localStorage.getItem('sessionStartTime') == null) {
+      localStorage.setItem('sessionStartTime', Date.now().toString());
+    }
+    this.startSessionCheck();
+  }
+
   startSessionCheck() {
     setInterval(() => {
       this.checkUserSession();

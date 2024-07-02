@@ -11,7 +11,9 @@ export const environment = {
   //urlAnime: 'https://repertorio-anime.web.app/',
   //urlMusica: 'https://repertorio-musica.web.app/',
   //urlSeries: 'https://repertorio-series.web.app/',
-  
+
+  temporizador: 0,
+
   proyecto: 1, // 1. Musica, 2. Series, 3. Anime
-  servidor: 1 // 1 Local, 2 Servidor
+  servidor: 1, // 1 Local, 2 Servidor
 };

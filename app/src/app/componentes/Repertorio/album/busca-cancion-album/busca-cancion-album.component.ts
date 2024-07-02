@@ -28,6 +28,7 @@ export class BuscaCancionAlbumComponent implements OnInit {
   Canciones: any = [];
   Album: any = [];
   idGrupo: number = 0;
+  
 
   //Busqueda
   search: any;
@@ -53,6 +54,9 @@ export class BuscaCancionAlbumComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const params = this.activatedRoute.snapshot.params;
+    localStorage.setItem('idAlbum', params['idAlbum']);
+    
     if (localStorage.getItem('Usuario') == null) {
       this.router.navigate(['login']);
     } else {
@@ -106,7 +110,6 @@ export class BuscaCancionAlbumComponent implements OnInit {
             this.OcultarAlerta = true;
           }
           this.Archivo = this.Album.Nombre;
-          localStorage.setItem('idAlbum', this.Album.idAlbum!);
         },
         (err) => {
           console.error(err);

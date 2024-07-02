@@ -23,6 +23,10 @@ import { FechaActual, FuncionesService } from 'src/app/servicios/funciones.servi
   styleUrls: ['./navigation.component.css'],
 })
 export class NavigationComponent implements OnInit {
+  sessionTime: string = '';
+
+  temporizador = environment.temporizador;
+
   proyecto = environment.proyecto;
   servidor = environment.servidor;
   //Proyectos
@@ -64,7 +68,7 @@ export class NavigationComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.alerta.startSessionCheck();
+    this.alerta.startSession();
     this.user = localStorage.getItem('Usuario');
     this.rol = localStorage.getItem('Rol');
 
@@ -78,7 +82,43 @@ export class NavigationComponent implements OnInit {
     } else {
       this.alerta.handleWindowClose(this.servidor);
     }
+
+    // Inicializar y actualizar el tiempo de sesión
+    this.updateSessionTime();
+    setInterval(() => {
+      this.updateSessionTime();
+    }, 1000); // Actualizar el temporizador cada segundo
   }
+
+  /* MOSTRAR TIEMPO DE SESION */
+  updateSessionTime() {
+    const sessionStartTime = localStorage.getItem('sessionStartTime');
+    if (sessionStartTime) {
+      const startTime = parseInt(sessionStartTime, 10);
+      const currentTime = Date.now();
+      const elapsedTime = currentTime - startTime;
+
+      this.sessionTime = this.formatTime(elapsedTime);
+    } else {
+      this.sessionTime = '00:00:00';
+    }
+  }
+
+  formatTime(milliseconds: number): string {
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    return `${this.padZero(hours)}:${this.padZero(minutes)}:${this.padZero(
+      seconds
+    )}`;
+  }
+
+  padZero(num: number): string {
+    return num < 10 ? '0' + num : num.toString();
+  }
+  /* MOSTRAR TIEMPO DE SESION */
 
   obtenerDatos() {
     if (localStorage.getItem('Usuario') != null) {
