@@ -9,7 +9,11 @@ import { OrderPipe } from 'ngx-order-pipe';
 //Exportar
 import * as XLSX from 'xlsx';
 import { environment } from 'src/environments/environment';
-import { FechaActual, FuncionesService } from 'src/app/servicios/funciones.service';
+import {
+  FechaActual,
+  FuncionesService,
+  TransformarFecha,
+} from 'src/app/servicios/funciones.service';
 
 @Component({
   selector: 'app-artista-list',
@@ -100,8 +104,12 @@ export class ArtistaListComponent implements OnInit {
     const wb = XLSX.utils.book_new();
 
     const nombreArchivo = `${this.Archivo}_${FechaActual()}.xlsx`;
-    
+
     XLSX.utils.book_append_sheet(wb, ws, this.Archivo);
     XLSX.writeFile(wb, nombreArchivo);
+  }
+
+  toLocalDate(dateString: string) {
+    return TransformarFecha(dateString);
   }
 }

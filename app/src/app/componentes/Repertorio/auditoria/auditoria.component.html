@@ -39,7 +39,7 @@
                         <td>{{canciones.usuario}}</td>
                         <td>{{canciones.proceso}}</td>
                         <td>{{canciones.idRegistro}}</td>
-                        <td>{{canciones.modificado | date: 'dd / MMMM / yyyy h:mm:ss a'}}</td>
+                        <td>{{toLocalDate(canciones.modificado) | date: 'dd / MMMM / yyyy h:mm:ss a'}}</td>
                     </tr>
                 </tbody>
             </table>

@@ -37,7 +37,7 @@
       <img [src]="artista.Foto == '' ? '/assets/noImagen.png' : artista.Foto " alt="Imagen del Artista">
       <div class="card-body" *ngIf="show">
         <p style="font-weight: bold;">Fecha Nacimiento</p>
-        <p>{{artista.FechaNacimiento | date: 'dd / MMMM / yyyy'}}</p>
+        <p>{{toLocalDate(artista.FechaNacimiento) | date: 'dd / MMMM / yyyy'}}</p>
         <p style="font-weight: bold;">Edad</p>
         <p>{{artista.Edad}}</p>
         <p style="font-weight: bold;">Instrumento que toca</p>

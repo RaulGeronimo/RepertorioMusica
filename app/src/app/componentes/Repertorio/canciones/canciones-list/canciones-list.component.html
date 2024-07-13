@@ -46,7 +46,7 @@
           <td>{{canciones.Nombre}}</td>
           <td>{{canciones.Grupo}}</td>
           <td>{{canciones.Duracion}}</td>
-          <td>{{canciones.Publicacion | date: 'dd / MMMM / yyyy'}}</td>
+          <td>{{toLocalDate(canciones.Publicacion) | date: 'dd / MMMM / yyyy'}}</td>
           <td>{{canciones.Genero}}</td>
           <td>
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">

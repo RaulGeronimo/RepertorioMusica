@@ -958,7 +958,8 @@ INSERT INTO `Canciones` VALUES
 (588,'Vicinity Of Obscenity','00:02:52','2005-06-07','Hard rock','Original',21),
 (589,'Runaway','00:03:08','2000-10-24','Metal alternativo, rap rock','Original',4),
 (590,'Feasting on the Flowers','00:03:23','2016-06-07','Rock','Original',20),
-(591,'Higher Ground','00:03:21','1973-07-17','Funk metal','Cover',20);
+(591,'Higher Ground','00:03:21','1973-07-17','Funk metal','Cover',20),
+(592,'LIES GREED MISERY','00:02:27','2012-10-07','Alternativa/independiente, Heavy metal','Original',4);
 
 
 
@@ -1632,7 +1633,8 @@ INSERT INTO `Canciones_Album` VALUES
 (665,84,588,9),
 (666,7,589,6),
 (667,93,590,8),
-(668,153,591,2);
+(668,153,591,2),
+(669,55,592,4);
 
 
 
@@ -2180,7 +2182,8 @@ INSERT INTO `Auditorias` VALUES
 (506,'Canciones','Higher Ground','raul090700@gmail.com','2024-06-09 23:37:47','Cancion agregada',591),
 (507,'Album','Mother\'s Milk','raul090700@gmail.com','2024-06-09 23:38:36','Album agregado',153),
 (508,'Album','I Disappear','raul090700@gmail.com','2024-06-15 00:16:30','Album actualizado',80),
-(509,'Album','Meteora','raul090700@gmail.com','2024-06-15 00:18:08','Album actualizado',57);
+(509,'Album','Meteora','raul090700@gmail.com','2024-06-15 00:18:08','Album actualizado',57),
+(510,'Canciones','LIES GREED MISERY','raul090700@gmail.com','2024-07-08 12:01:03','Cancion agregada',592);
 
 
 

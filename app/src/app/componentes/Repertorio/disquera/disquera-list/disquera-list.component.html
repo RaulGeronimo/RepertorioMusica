@@ -38,7 +38,7 @@
       </div>
       <div class="card-body" *ngIf="show">
         <p style="font-weight: bold;">Fundacion</p>
-        <p>{{disquera.Fundacion | date: 'MMMM / yyyy'}}</p>
+        <p>{{toLocalDate(disquera.Fundacion) | date: 'MMMM / yyyy'}}</p>
         <p style="font-weight: bold;">Fundadores</p>
         <p>{{disquera.Fundador}}</p>
         <p style="font-weight: bold;">Generos</p>

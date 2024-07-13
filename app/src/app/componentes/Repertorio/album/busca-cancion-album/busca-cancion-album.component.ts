@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 import {
   FechaActual,
   FuncionesService,
+  TransformarFecha,
 } from 'src/app/servicios/funciones.service';
 
 @Component({
@@ -28,7 +29,6 @@ export class BuscaCancionAlbumComponent implements OnInit {
   Canciones: any = [];
   Album: any = [];
   idGrupo: number = 0;
-  
 
   //Busqueda
   search: any;
@@ -56,7 +56,7 @@ export class BuscaCancionAlbumComponent implements OnInit {
   ngOnInit(): void {
     const params = this.activatedRoute.snapshot.params;
     localStorage.setItem('idAlbum', params['idAlbum']);
-    
+
     if (localStorage.getItem('Usuario') == null) {
       this.router.navigate(['login']);
     } else {
@@ -136,8 +136,12 @@ export class BuscaCancionAlbumComponent implements OnInit {
     const wb = XLSX.utils.book_new();
 
     const nombreArchivo = `${this.Archivo}_${FechaActual()}.xlsx`;
-    
+
     XLSX.utils.book_append_sheet(wb, ws, 'Canciones');
     XLSX.writeFile(wb, nombreArchivo);
+  }
+
+  toLocalDate(dateString: string) {
+    return TransformarFecha(dateString);
   }
 }

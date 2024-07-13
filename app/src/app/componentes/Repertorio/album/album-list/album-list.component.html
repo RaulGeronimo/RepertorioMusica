@@ -52,7 +52,7 @@
         <p style="font-weight: bold;">Duración</p>
         <p>{{album.Duracion}}</p>
         <p style="font-weight: bold;">Lanzamiento</p>
-        <p>{{album.Lanzamiento | date: 'dd / MMMM / yyyy'}}</p>
+        <p>{{toLocalDate(album.Lanzamiento) | date: 'dd / MMMM / yyyy'}}</p>
         <p style="font-weight: bold;">Disquera</p>
         <p>{{album.Disquera}}</p>
         <a [routerLink]="['/repertorio/album/actualizar', album.idAlbum]" class="btn btn-info btn-block">Editar</a>
@@ -88,7 +88,7 @@
             <td>{{album.Canciones}}</td>
             <td>{{album.Disquera}}</td>
             <td>{{album.Duracion}}</td>
-            <td>{{album.Lanzamiento | date: 'dd / MMMM / yyyy'}}</td>
+            <td>{{toLocalDate(album.Lanzamiento) | date: 'dd / MMMM / yyyy'}}</td>
             <td>{{album.Grabacion}}</td>
             <td>{{album.Genero}}</td>
             <td>

@@ -119,3 +119,8 @@ export function FechaActual() {
   const segundos = fechaActual.getMilliseconds();
   return `${año}${mes}${dia}${segundos}`;
 }
+
+export function TransformarFecha(dateString: string): Date {
+  let date = new Date(dateString);
+  return new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+}

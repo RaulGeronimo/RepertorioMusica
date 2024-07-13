@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
 //Exportar
 import * as XLSX from 'xlsx';
 import { environment } from 'src/environments/environment';
-import { FechaActual, FuncionesService } from 'src/app/servicios/funciones.service';
+import {
+  FechaActual,
+  FuncionesService,
+  TransformarFecha,
+} from 'src/app/servicios/funciones.service';
 
 @Component({
   selector: 'app-disquera-list',
@@ -77,5 +81,9 @@ export class DisqueraListComponent implements OnInit {
     XLSX.utils.book_append_sheet(wb, ws, this.Archivo);
     // Guardar el archivo con el nombre que incluye la fecha
     XLSX.writeFile(wb, nombreArchivo);
+  }
+
+  toLocalDate(dateString: string) {
+    return TransformarFecha(dateString);
   }
 }

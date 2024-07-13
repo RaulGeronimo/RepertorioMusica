@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 import {
   FechaActual,
   FuncionesService,
+  TransformarFecha,
 } from 'src/app/servicios/funciones.service';
 
 @Component({
@@ -142,5 +143,9 @@ export class BuscaAlbumGrupoComponent implements OnInit {
     XLSX.utils.book_append_sheet(wb, ws, 'Albumes');
     // Guardar el archivo con el nombre que incluye la fecha
     XLSX.writeFile(wb, nombreArchivo);
+  }
+
+  toLocalDate(dateString: string) {
+    return TransformarFecha(dateString);
   }
 }

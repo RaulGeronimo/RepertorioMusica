@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 import {
   FechaActual,
   FuncionesService,
+  TransformarFecha,
 } from 'src/app/servicios/funciones.service';
 
 @Component({
@@ -67,7 +68,7 @@ export class UsuariosComponent implements OnInit {
   obtenerLista() {
     this.Service.lista().subscribe(
       (res) => {
-        //console.log(res); //Muestra en consola
+        console.log(res); //Muestra en consola
         //Llena el arreglo con la respuesta que enviamos
         this.Usuarios = res;
         this.total = this.Usuarios.length;
@@ -96,5 +97,9 @@ export class UsuariosComponent implements OnInit {
     XLSX.utils.book_append_sheet(wb, ws, this.Archivo);
     // Guardar el archivo con el nombre que incluye la fecha
     XLSX.writeFile(wb, nombreArchivo);
+  }
+
+  toLocalDate(dateString: string) {
+    return TransformarFecha(dateString);
   }
 }
