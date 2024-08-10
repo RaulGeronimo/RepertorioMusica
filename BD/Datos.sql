@@ -133,7 +133,7 @@ INSERT INTO `Grupo` VALUES
 (7,'AC/DC','Sídney, Nueva Gales del Sur, Australia','Hard rock, heavy metal, rock and roll, blues rock','1973-11-06','','Albert Productions, Atco Records, Atlantic Records, Columbia Records, East West Records, Elektra Records, EMI, Epic Records, Sony BMG','Activo','http://www.acdc.com/','Ingles','https://cdn.worldvectorlogo.com/logos/ac-dc-53021.svg'),
 (8,'Arctic Monkeys','Sheffield, Inglaterra, Reino Unido','Indie rock, Garage rock revival, Rock psicodélico, Post-punk revival','2002-05-16','','Domino Records','Activo','http://arcticmonkeys.com/','Ingles','https://i.pinimg.com/originals/81/a1/89/81a189de4809b794efe075dbe6f75434.png'),
 (9,'Audioslave','Glendale, California, Estados Unidos','Hard rock , rock alternativo, post-grunge, metal alternativo','2001-10-18','2007-01-22','Epic Records, Interscope Records','Disuelto','http://audioslave.com/','Ingles','https://i.pinimg.com/originals/16/71/f1/1671f123fdd2b6e5caebfc49840ac312.jpg'),
-(10,'A Day to Remember','Ocala, Florida, Estados Unidos','Metalcore, Pop Punk, Post-Hardcore, Easycore, Emocore','2003-11-16','','ADTR, Victory, Indianola, Fueled by Ramen','Activo','http://adtr.com/','Ingles','https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/1-best-selling-logo-music-a-day-to-remember-fenomenal-disco-punkhead.jpg'),
+(10,'A Day to Remember','Ocala, Florida, Estados Unidos','Metalcore, Pop Punk, Post-Hardcore, Easycore, Emocore','2003-11-16','','ADTR, Victory, Indianola, Fueled by Ramen','Activo','http://adtr.com/','Ingles','https://lh5.googleusercontent.com/proxy/0rZ0Lugo8XIzxuKcqhYdhrcfi3No3JC-t84OUO9wNPd2jTzP4cFXB5jPL_pLXgYSQ-ix3L0c4-0SxYEpGy8pREdyklKM3UdE-lFPl9EKD8xNenLt2tA-KBq1-7M'),
 (11,'Guns N\' Roses','Los Ángeles, California, Estados Unidos','Hard rock, Heavy metal, Punk rock, Blues rock, Glam metal, Sleaze rock','1985-06-17','','Geffen, UZI Suicide, Black Frog','Activo','http://www.gunsnroses.com/','Ingles','https://i.pinimg.com/originals/0e/a4/d1/0ea4d1f381202bcbfb4d2c71fe012e69.jpg'),
 (12,'The Doors','Los Ángeles, California, Estados Unidos De América','Rock psicodélico, Blues rock, Pop rock, Rock n Roll','1965-02-06','1973-08-05','Elektra Records, Rhino Entertainment','Disuelto','https://www.thedoors.com/','Ingles','https://ih1.redbubble.net/image.1935807259.5802/st,small,845x845-pad,1000x1000,f8f8f8.jpg'),
 (13,'Iron Maiden','Londres, Inglaterra, Reino Unido','Heavy metal','1975-04-02','','Capitol Records, Columbia Records, EMI Records, Epic Records, Harvest Records, Portrait Records, Sanctuary Records, Parlophone Records','Activo','http://www.ironmaiden.com/','Ingles','https://cdn.shopify.com/s/files/1/0483/0271/9137/products/31261_1200x.jpg?v=1607354339'),
@@ -312,7 +312,7 @@ INSERT INTO `Album` VALUES
 (101,18,19,'Creep','00:03:59','1992-09-21','1992 en Chipping Norton Recording Studios, Oxfordshire, Inglaterra','Rock alternativo, grunge, post-grunge','https://2.bp.blogspot.com/_DhMSy3s7R4g/TOfkyzp-UvI/AAAAAAAAAKo/qyTGvjXpR_Q/s1600/47544.gif.jpg'),
 (102,18,19,'I Might Be Wrong','00:40:41','2001-11-12','28 de mayo del 2001 – 20 de agosto del 2001','Electrónico, Rock Experimental, Rock alternativo','https://i.pinimg.com/originals/48/ea/bf/48eabf3f07bbbc7bc162c97be49f757c.jpg'),
 (103,18,8,'Kid A','00:49:51','2000-10-02','4 de enero de 1999 – 18 de abril de 2000','Art rock, electrónica, rock experimental','https://gifsf.com/files/attach/images/3784216/957/101/004/66967637fbe6449be230a00d50d91f6d.jpg'),
-(104,4,4,'Papercuts (Singles Collection 2000–2023)','01:07:57','2024-04-12','2000-2016','Metal alternativo, nu metal, pop rock, rap metal, rock alternativo, rock electrónico','https://e.snmc.io/i/600/s/8aef0c3c10c46324c6a3d78c75f4a944/11831401/linkin-park-friendly-fire-Cover-Art.png'),
+(104,4,4,'Papercuts (Singles Collection 2000–2023)','01:07:57','2024-04-12','2000-2016','Metal alternativo, nu metal, pop rock, rap metal, rock alternativo, rock electrónico','https://th.bing.com/th/id/OIP.ixk42_9hK8DxD-CgSs3D_AHaHa?rs=1&pid=ImgDetMain'),
 (105,7,4,'Highway to Hell','00:42:10','1979-07-27','febrero-abril de 1979','Hard rock, blues rock, rock and roll, heavy metal','https://m.media-amazon.com/images/I/91NuHgWC6cL._UF1000,1000_QL80_.jpg'),
 (106,7,21,'Power Up','00:41:03','2020-11-13','Agosto - septiembre de 2018 y principios de 2019 Warehouse Studio, Vancouver, British Columbia','Hard rock, rock and roll','https://th.bing.com/th/id/R.315d01c150e73cd2ee846260fef610ce?rik=iMR1YLUoZddm3w&pid=ImgRaw&r=0'),
 (107,7,21,'Iron Man 2','01:00:15','2010-04-19','7 de 1975 – 4 de 2008','rock pesado, blues rock, rock and roll','https://th.bing.com/th/id/OIP._XU3x3hbtpg_Jsje-G0wBAHaHa?rs=1&pid=ImgDetMain'),
@@ -959,7 +959,10 @@ INSERT INTO `Canciones` VALUES
 (589,'Runaway','00:03:08','2000-10-24','Metal alternativo, rap rock','Original',4),
 (590,'Feasting on the Flowers','00:03:23','2016-06-07','Rock','Original',20),
 (591,'Higher Ground','00:03:21','1973-07-17','Funk metal','Cover',20),
-(592,'LIES GREED MISERY','00:02:27','2012-10-07','Alternativa/independiente, Heavy metal','Original',4);
+(592,'LIES GREED MISERY','00:02:27','2012-10-07','Alternativa/independiente, Heavy metal','Original',4),
+(593,'Nobody Can Save Me','00:03:45','2017-05-19','Pop rock, rock alternativo','Original',4),
+(594,'Battle Symphony','00:03:36','2017-05-19','Pop, pop rock, electropop , Rock electrónico','Original',4),
+(595,'SKIN TO BONE','00:02:49','2012-02-07','Alternativa/independiente, Heavy metal','Original',4);
 
 
 
@@ -1634,40 +1637,10 @@ INSERT INTO `Canciones_Album` VALUES
 (666,7,589,6),
 (667,93,590,8),
 (668,153,591,2),
-(669,55,592,4);
-
-
-
-
-
-INSERT INTO `Instrumento_Artista` VALUES
-(1,1,1),
-(2,3,2),
-(3,2,3),
-(4,1,2),
-(5,11,3),
-(6,1,5),
-(7,5,5),
-(8,3,5),
-(9,3,1),
-(10,8,5),
-(11,8,1),
-(12,8,2),
-(13,4,1),
-(14,4,2),
-(15,4,5),
-(16,9,1),
-(17,9,5),
-(18,10,1),
-(19,10,2),
-(20,10,5),
-(21,13,2),
-(22,13,5),
-(23,7,5),
-(24,6,2),
-(25,6,5),
-(26,12,5),
-(27,14,4);
+(669,55,592,4),
+(670,8,593,1),
+(671,8,594,4),
+(672,55,595,9);
 
 
 
@@ -2183,7 +2156,13 @@ INSERT INTO `Auditorias` VALUES
 (507,'Album','Mother\'s Milk','raul090700@gmail.com','2024-06-09 23:38:36','Album agregado',153),
 (508,'Album','I Disappear','raul090700@gmail.com','2024-06-15 00:16:30','Album actualizado',80),
 (509,'Album','Meteora','raul090700@gmail.com','2024-06-15 00:18:08','Album actualizado',57),
-(510,'Canciones','LIES GREED MISERY','raul090700@gmail.com','2024-07-08 12:01:03','Cancion agregada',592);
+(510,'Canciones','LIES GREED MISERY','raul090700@gmail.com','2024-07-08 12:01:03','Cancion agregada',592),
+(511,'Canciones','Nobody Can Save Me','raul090700@gmail.com','2024-07-29 12:16:27','Cancion agregada',593),
+(512,'Canciones','Battle Symphony','raul090700@gmail.com','2024-07-29 12:18:10','Cancion agregada',594),
+(513,'Canciones','Skin to Bone','raul090700@gmail.com','2024-08-05 17:36:19','Cancion agregada',595),
+(514,'Canciones','SKIN TO BONE','raul090700@gmail.com','2024-08-05 17:37:08','Cancion actualizada',595),
+(515,'Grupo','A Day to Remember','raul090700@gmail.com','2024-08-09 23:53:54','Grupo actualizado',10),
+(516,'Album','Papercuts (Singles Collection 2000–2023)','raul090700@gmail.com','2024-08-10 00:00:55','Album actualizado',104);
 
 
 

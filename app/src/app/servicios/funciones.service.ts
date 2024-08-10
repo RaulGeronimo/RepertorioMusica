@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -120,7 +121,42 @@ export function FechaActual() {
   return `${año}${mes}${dia}${segundos}`;
 }
 
-export function TransformarFecha(dateString: string): Date {
-  let date = new Date(dateString);
-  return new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+export function TransformarFecha(dateString: string): string {
+  let servidor: number;
+  servidor = environment.servidor;
+  if (servidor == 2) {
+    if (dateString != null) {
+      let date = new Date(dateString);
+      return new Date(
+        date.getTime() + date.getTimezoneOffset() * 60000
+      ).toString();
+    } else {
+      return '';
+    }
+  } else {
+    if (dateString != null) {
+      let date = new Date(dateString);
+
+      // Extraer la parte de la fecha (año, mes, día)
+      const year = date.getUTCFullYear();
+      const month = date.getUTCMonth() + 1; // Los meses en JavaScript van de 0 a 11, así que sumamos 1
+      const day = date.getUTCDate();
+
+      // Extraer la parte de la hora (hora, minutos, segundos)
+      const hours = date.getUTCHours();
+      const minutes = date.getUTCMinutes();
+      const seconds = date.getUTCSeconds();
+
+      // Formatear la fecha como una cadena
+      const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day
+        .toString()
+        .padStart(2, '0')}T${hours.toString().padStart(2, '0')}:${minutes
+        .toString()
+        .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}Z`;
+
+      return formattedDate;
+    } else {
+      return '';
+    }
+  }
 }
