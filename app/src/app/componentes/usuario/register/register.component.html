@@ -73,7 +73,7 @@
                   <input type="date" id="typeDate" class="form-control form-control-lg"
                     formControlName="FechaNacimiento" [(ngModel)]="user.FechaNacimiento"
                     [class.is-invalid]="form.get('FechaNacimiento')?.invalid && form.get('FechaNacimiento')?.touched"
-                    [class.is-valid]="form.get('FechaNacimiento')?.valid" />
+                    [class.is-valid]="form.get('FechaNacimiento')?.valid" max="9999-12-31"/>
 
                   <span
                     *ngIf="form.get('FechaNacimiento')?.hasError('required') && form.get('FechaNacimiento')?.touched">El

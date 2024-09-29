@@ -35,7 +35,7 @@
               <input id="Publicacion" type="date" [(ngModel)]="cancion.Publicacion" formControlName="Publicacion"
                 class="form-control"
                 [class.is-invalid]="form.get('Publicacion')?.invalid && form.get('Publicacion')?.touched"
-                [class.is-valid]="form.get('Publicacion')?.valid" />
+                [class.is-valid]="form.get('Publicacion')?.valid" max="9999-12-31"/>
             </div>
 
             <span *ngIf="form.get('Publicacion')?.hasError('required') && form.get('Publicacion')?.touched">El campo

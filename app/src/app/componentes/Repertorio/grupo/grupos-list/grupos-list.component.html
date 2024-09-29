@@ -23,7 +23,7 @@
   <a type="button" class="btn btn-outline-light" (click)="tabla=!tabla">Otra Vista</a>
 </div>
 
-<label>Total: {{total}} registros</label>
+<label>Total: {{ (Grupos | filter:search).length }} registros</label>
 
 <div class="container-scroll row" *ngIf="tabla; else lista">
   <div class="col-md-4" *ngFor="let grupos of Grupos | filter:search" style="margin-bottom: 1.5rem;">

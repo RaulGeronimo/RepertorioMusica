@@ -1,6 +1,11 @@
 //Variable de Entorno para firebase
 export const environment = {
   production: true,
+
+  refrescarLista: 15000, //15 segundos
+  tiempoSession: 3600000, // 1h para que este activa la sesion
+  tiempoAlerta: 5000, // 5 segundos para responder a la alerta
+  
   //apiUrl: 'https://repertorioangular-production.up.railway.app/app',
   //apiUrl: 'https://repertoriomusica.onrender.com/app',
   apiUrl: 'http://localhost:3000/app',

@@ -111,7 +111,7 @@
 
 <!-- Tabla -->
 <ng-template #lista>
-  <label>Total: {{total}} registros</label>
+  <label>Total: {{ (Album | filter:search).length }} registros</label>
   <div class="container-scroll">
     <div class="table-responsive">
       <table id="myTable" class="table table-hover table-dark resp">

@@ -12,7 +12,7 @@
     </button>
 </div>
 
-<label>Total: {{total}} registros</label>
+<label>Total: {{ (Usuarios | filter:search).length }} registros</label>
 
 <div class="container-scroll">
     <div class="table-responsive">

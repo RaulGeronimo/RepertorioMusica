@@ -15,7 +15,7 @@
     aria-describedby="addon-wrapping" [(ngModel)]="search" autofocus>
 </div>
 
-<label>Total: {{total}} registros</label>
+<label>Total: {{ (artistas | filter:search).length }} registros</label>
 
 <div class="container-scroll row">
   <div class="col-md-5 margen">

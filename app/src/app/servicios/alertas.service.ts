@@ -13,6 +13,7 @@ import { GruposService } from './grupos.service';
 import { InstrumentosService } from './instrumentos.service';
 import { InstrumentoArtistaService } from './instrumento-artista.service';
 import { PaisService } from './pais.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -21,8 +22,8 @@ export class AlertasService {
   timeOut: number = 2500;
   Usuario: string = localStorage.getItem('Correo') || '';
 
-  sessionTimeout: number = 3600000; // 1h para que este activa la sesion
-  alertResponseTime: number = 5000; // 10 segundos para responder a la alerta
+  sessionTimeout: number = environment.tiempoSession; // 1h para que este activa la sesion
+  alertResponseTime: number = environment.tiempoAlerta; // 5 segundos para responder a la alerta
 
   //Mensajes eliminacion
   Titulo: string = '¿Estas seguro de eliminar el registro?';

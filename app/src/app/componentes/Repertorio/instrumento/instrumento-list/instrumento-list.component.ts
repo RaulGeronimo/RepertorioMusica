@@ -41,7 +41,7 @@ export class InstrumentoListComponent implements OnInit {
           // Llamar a la función cada 10 segundos (10,000 milisegundos)
           setInterval(() => {
             this.obtenerDatos();
-          }, 10000);
+          }, environment.refrescarLista);
         }
       } else {
         this.router.navigate(['/']);

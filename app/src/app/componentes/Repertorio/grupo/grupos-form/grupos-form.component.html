@@ -41,7 +41,7 @@
               <label for="inputInicio" class="input-group-text">Inicio del Grupo</label>
               <input id="inputInicio" type="date" [(ngModel)]="grupo.Inicio" formControlName="Inicio"
                 class="form-control" [class.is-invalid]="form.get('Inicio')?.invalid && form.get('Inicio')?.touched"
-                [class.is-valid]="form.get('Inicio')?.valid" />
+                [class.is-valid]="form.get('Inicio')?.valid" max="9999-12-31"/>
             </div>
 
             <span *ngIf="form.get('Inicio')?.hasError('required') && form.get('Inicio')?.touched">El campo <span
@@ -52,7 +52,7 @@
           <div class="card-body">
             <div class="input-group">
               <label for="inputFin" class="input-group-text">Fin del Grupo</label>
-              <input id="inputFin" type="date" [(ngModel)]="grupo.Fin" formControlName="Fin" class="form-control" />
+              <input id="inputFin" type="date" [(ngModel)]="grupo.Fin" formControlName="Fin" class="form-control" max="9999-12-31"/>
             </div>
           </div>
 

@@ -49,7 +49,7 @@
               <input id="Nacimiento" type="date" [(ngModel)]="artista.FechaNacimiento" formControlName="FechaNacimiento"
                 class="form-control"
                 [class.is-invalid]="form.get('FechaNacimiento')?.invalid && form.get('FechaNacimiento')?.touched"
-                [class.is-valid]="form.get('FechaNacimiento')?.valid" />
+                [class.is-valid]="form.get('FechaNacimiento')?.valid" max="9999-12-31"/>
             </div>
 
             <span *ngIf="form.get('FechaNacimiento')?.hasError('required') && form.get('FechaNacimiento')?.touched">El
@@ -61,7 +61,7 @@
             <div class="input-group">
               <label for="Finado" class="input-group-text">Fecha de Finado</label>
               <input id="Finado" type="date" [(ngModel)]="artista.FechaFinado" formControlName="FechaFinado"
-                class="form-control" />
+                class="form-control" max="9999-12-31"/>
             </div>
           </div>
 

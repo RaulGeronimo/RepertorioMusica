@@ -1,8 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Pipe, PipeTransform } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
+})
+@Pipe({
+  name: 'orderBy',
 })
 export class FuncionesService {
   Lista: any = [];
@@ -134,29 +137,18 @@ export function TransformarFecha(dateString: string): string {
       return '';
     }
   } else {
-    if (dateString != null) {
-      let date = new Date(dateString);
+    return dateString;
+  }
+}
 
-      // Extraer la parte de la fecha (año, mes, día)
-      const year = date.getUTCFullYear();
-      const month = date.getUTCMonth() + 1; // Los meses en JavaScript van de 0 a 11, así que sumamos 1
-      const day = date.getUTCDate();
+export class FilterPipe implements PipeTransform {
+  transform(items: any[], searchText: string): any[] {
+    if (!items) return [];
+    if (!searchText) return items;
 
-      // Extraer la parte de la hora (hora, minutos, segundos)
-      const hours = date.getUTCHours();
-      const minutes = date.getUTCMinutes();
-      const seconds = date.getUTCSeconds();
-
-      // Formatear la fecha como una cadena
-      const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day
-        .toString()
-        .padStart(2, '0')}T${hours.toString().padStart(2, '0')}:${minutes
-        .toString()
-        .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}Z`;
-
-      return formattedDate;
-    } else {
-      return '';
-    }
+    searchText = searchText.toLowerCase();
+    return items.filter((item) => {
+      return item.nombre.toLowerCase().includes(searchText); // Ajusta 'nombre' al campo adecuado
+    });
   }
 }

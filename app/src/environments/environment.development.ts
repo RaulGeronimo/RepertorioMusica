@@ -1,6 +1,11 @@
 //Variable de Entorno de manera Local
 export const environment = {
   production: false,
+
+  refrescarLista: 15000, //15 segundos
+  tiempoSession: 3600000, // 1h para que este activa la sesion
+  tiempoAlerta: 5000, // 5 segundos para responder a la alerta
+  
   apiUrl: 'http://localhost:3000/app',
 
   urlAnime: 'http://127.0.0.1:8083/',

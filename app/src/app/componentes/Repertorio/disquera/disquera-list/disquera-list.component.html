@@ -14,7 +14,7 @@
   </button>
 </div>
 
-<label>Total: {{total}} registros</label>
+<label>Total: {{ (Disqueras | filter:search).length }} registros</label>
 
 <div class="container-scroll row">
   <div class="col-md-4" *ngFor="let disquera of Disqueras | filter:search" style="margin-bottom: 1.5rem;">
